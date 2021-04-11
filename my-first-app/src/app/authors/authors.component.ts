@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorsComponent implements OnInit {
   authors: Author[];
-
+  h3label: string;
+  colspan = 2;
   constructor(authorsService: AuthorsService) {
     this.authors = authorsService.authors;
+    this.h3label = this.authors.length + ' Authors';
   }
 
   ngOnInit(): void {}

@@ -377,8 +377,18 @@ Where is the logic of `<authors></authors>`? It is in `authors.component.html`. 
 </table>
 ```
 
-So, the number author is rendered as simply a text under `<h1>`, while the detail of `Author` is rendered as record under a table.
-The last step is updating the `app.component.html` to render the new tag. Add the `<authors></authors>` as below
+> string interpolation `double curly brackets` same as `property binding`. Which is one way binding. What does it means ? The communication is between `component` and `dom`. For example, if the html dom element is `input text`, if there is changes on dom then it will not be reflected in the component. However, any changes on component, it is reflected in dom.
+> Different syntax of property binding. For example, in the case of displaying the `<h1>` above, the following is another way,
+
+```html
+<h1 [textContent]="h3label"></h1>
+```
+
+> Basically a dom property in square bracket bound to a variable name in typescript. In the above example, `textContent` is the property of `h1` in `dom`, while `h3label` is a variable in `TypeScript`
+
+> So, the number of author is rendered as simply a text under `<h1>`, while the detail of `Author` is rendered as record under a table.
+
+> The last step is updating the `app.component.html` to render the new tag. Add the `<authors></authors>` as below
 
 ```html
 <h1>Angular</h1>
@@ -386,3 +396,41 @@ The last step is updating the `app.component.html` to render the new tag. Add th
 ```
 
 That's it.
+
+# Binding
+
+![DOM to HTML Mapping](images/dom_html.PNG)
+
+For 99% cases, there is one to one mapping between `html attribute` and `dom property`.
+
+Few exceptions, ...
+
+`property binding`
+
+This will target dom property
+
+`attribute binding`
+
+This will target html attribute
+
+`Style`, `class`=> based on a state of the component
+
+`event binding`: click, keyup
+
+handle event raised from the DOM.
+
+`Event Bubbling`
+
+> event propagation in dom tree.
+
+## Pipes
+
+String formatting.
+
+![Pipes](images/pipes.PNG)
+
+`Custom Pipe`
+
+**Use Case**
+
+> Summary of a long text, eg. for blog
