@@ -1,0 +1,14 @@
+<h1>{{ authors.length }} Authors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Publication</th>
+    <th>Rating</th>
+  </tr>
+  <tr *ngFor="let author of authors">
+    <td>{{ author.name }}</td>
+    <td>{{ author.pub }}</td>
+    <td>{{ author.rating }}</td>
+  </tr>
+</table>
