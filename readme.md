@@ -1,5 +1,9 @@
 # Angular Exploring
 
+I am a java developer who used to avoid task that relates to presentation layer, except `JavaFx`. However, witnessing the growing demmand on those who can do both `back-end` and `front-end` at the same time, I think like or dislike, I need to be more flexible to stay relevant with the market, or even during day to day project. Nowadays, from the business point of view, having developer with broader knowledge, from back-end to front-end, not only reduce the cost, but also make it more efficient, for example, remove dependencies between the one who knows the front-end will depend on back-end. For an innovation project, which involves the end UI, means, having a developer who knows both, will make the process of backend, frontend, integration and e2e testing more quick, which is aligned with agile spirit. I would like to tell whoever, feels intimidating with the Angular stuffs, you are not alone !!!. Having Typescipt with part of the Angular, feels, myself at home when coding Angular. This should be the same for you as well. Lets the journey with Angular world be fun and enjoyble. !!!!
+
+## Overview
+
 A framework for building client applications in HTML,CSS, and JavaScript / TypeScript
 
 - gives application with clean structure
@@ -222,6 +226,7 @@ Take, presenting a list of authors.
 |Author 1| 10|23|
 |Author 2| 10|15|
 |Author 3| 15|30|
+
 There are 3 things need to take care.
 
 - decouple data provider with the data presenter so that, in case of angular unit testing scope is only testing the presenter layer, and the decoupling should be easy to do.
