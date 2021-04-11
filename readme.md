@@ -1,34 +1,40 @@
 # Angular Exploring
 
-I am a java developer who used to avoid task that relates to presentation layer, except `JavaFx`. However, witnessing the growing demmand on those who can do both `back-end` and `front-end` at the same time, I think like or dislike, I need to be more flexible to stay relevant with the market, or even during day to day project. Nowadays, from the business point of view, having developer with broader knowledge, from back-end to front-end, not only reduce the cost, but also make it more efficient, for example, remove dependencies between the one who knows the front-end will depend on back-end. For an innovation project, which involves the end UI, means, having a developer who knows both, will make the process of backend, frontend, integration and e2e testing more quick, which is aligned with agile spirit. I would like to tell whoever, feels intimidating with the Angular stuffs, you are not alone !!!. Having Typescipt with part of the Angular, feels, myself at home when coding Angular. This should be the same for you as well. Lets the journey with Angular world be fun and enjoyble. !!!!
+I am a java developer who used to avoid task that relates to presentation layer, except `JavaFx`. However, witnessing the growing demmand on those who can do both `back-end` and `front-end` at the same time, I think like or dislike, I need to be more flexible to stay relevant with the market, or even during day to day project. Nowadays, from the business point of view, having developer with broader knowledge, from back-end to front-end, not only reduce the cost, but also make it more efficient, for example, remove dependencies between the one who knows the front-end will depend on back-end. For an innovation project, which involves the end UI, means, having a developer who knows both, will make the process of backend, frontend, integration and e2e testing more quick, which is aligned with agile spirit. I would like to tell whoever, feels intimidating with the Angular stuffs, you are not alone !!!. Having Typescipt with part of the Angular, feels, myself at home when coding Angular. This should be the same for you as well. Lets the journey with Angular world be fun and enjoyable. !!!!
 
 ## Overview
 
-A framework for building client applications in HTML,CSS, and JavaScript / TypeScript
+Angular is a framework for building client applications in HTML,CSS, and JavaScript / TypeScript which addresses challanges faced in the past (before Angular was invented), such as,
 
 - gives application with clean structure
 - includes a lot of re-usable code
 - makes our applications more testable
 
-`Architecture`
+Just a remainder, at high level view, the application's `Architecture`, most of the time if not always, is involving `front-end` and `back-end`.
 
 ![Arch](images/arch.PNG)
 
+As what we understand, when working with Angular, the scope will be `front-end`.
+
 ## Requirement
 
-- Node
+There are a couple of things needed before we can start coding with Angular,
 
-  > No node no angular
+`node`
 
-  ![Node](images/node.PNG)
+> Without node, the angular is not possible.
 
-  Basically is to run the javascript outside the browser
+![Node](images/node.PNG)
 
-- Node Package Manager
+Basically is to run the javascript outside the browser
 
-  ![V8](images/npm.PNG)
+`npm a.k.a Node Package Manager`
 
-> Just tell me the name of that package I will hunt it
+A tool to resolve the dependencies for a node project, for a given package meta-data.
+
+It works like this, Just tell me the name of that package I will hunt it
+
+![V8](images/npm.PNG)
 
 > This is for javascript, means hunting the javascript package
 
@@ -66,6 +72,7 @@ npm@6.14.6 C:\apps\node-v12.18.3-win-x64\node_modules\npm
 `Why need to learn node ?`
 
 To understand node then it can be used for angular
+
 Can I get the angular from npm?
 
 ```npm
@@ -133,7 +140,7 @@ For that, there is angular cli
 `Angular CLI`
 
 ```text
-C:\Projects\gowkspace\src\github.com\samutayuga\angularmomentum>ng --version
+ng --version
 
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
