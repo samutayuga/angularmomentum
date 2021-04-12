@@ -1,3 +1,4 @@
+import { TitleCased } from './titlecase.pipe';
 import { SummaryPipe } from './summary.pipe';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorsService } from './authors.service';
@@ -10,7 +11,14 @@ import { AuthorsComponent } from './authors/authors.component';
 import { BlinkersComponent } from './blinkers/blinkers.component';
 
 @NgModule({
-  declarations: [AppComponent, AuthorsComponent, CoursesComponent, SummaryPipe, BlinkersComponent],
+  declarations: [
+    AppComponent,
+    AuthorsComponent,
+    CoursesComponent,
+    SummaryPipe,
+    BlinkersComponent,
+    TitleCased,
+  ],
   imports: [BrowserModule, FormsModule],
   providers: [AuthorsService],
   bootstrap: [AppComponent],

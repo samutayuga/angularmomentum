@@ -1,1 +1,5 @@
-<span class="glyphicon glyphicon-star"></span>
+<input [(ngModel)]="inputText" (keyUp)="onTyping()" />
+<br />
+<p>
+  {{ inputText | title }}
+</p>

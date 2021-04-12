@@ -433,4 +433,78 @@ String formatting.
 
 **Use Case**
 
-> Summary of a long text, eg. for blog
+> As the show case on the power of `pipe`, `two-ways binding` the following is the simple use where it is applicable. Assuming a page as bellow,
+
+![Title Case Pipe](images/titlecase_pipe.PNG)
+
+Steps:
+
+- Create a new Component
+
+```ng-cli
+ng g c titlecaser
+```
+
+This will produces
+
+![Title Case Component](images/c_titlecase.PNG)
+
+Open the `xxx.component.ts`
+
+The component needs to have a variable that holds the value binded to `dom` property. Here the variable name is `inputText`
+There is an event handler method to listen on the `keyUp` action. Lets call that method `onTyping`. Nothing special needed on this method, except logging.
+
+```typescript
+export class BlinkersComponent implements OnInit {
+  inputText;
+  // tslint:disable-next-line: typedef
+  onTyping() {
+    console.log(this.inputText);
+  }
+  ngOnInit(): void {}
+}
+```
+
+Open the html template file, `xxx.component.html`.
+
+```html
+<input [(ngModel)]="inputText" (keyUp)="onTyping()" />
+<br />
+<p>{{ inputText | title }}</p>
+```
+
+The `[(ngModel)]="inputText"` together with `onTyping` do the magic, where every changes on `dom` is reflected on the `component`,so that, the string interpolation or property binding `{{ inputText }}` gets updated.
+Further more, for any text is `piped` into `title` pipe, which is converting the text into title case format.
+`title` is a custom pipe where it is implemented in `titlecase.pipe.ts`.
+Lets open this file,
+
+```typescript
+import { Pipe, PipeTransform } from "@angular/core";
+@Pipe({
+  name: "title",
+})
+export class TitleCased implements PipeTransform {
+  words: RegExp = /\b(?!of|by|in|the|at|and)\w+/g;
+  // tslint:disable-next-line: typedef
+  transform(text: string, params: any) {
+    if (!text) {
+      return text;
+    }
+    // algop for title case
+
+    // capitalize the first letter of said word
+    const newVal = text.toLowerCase().replace(this.words, this.ifMatch);
+
+    // always capilize first letter of new val
+    return newVal.charAt(0).toUpperCase() + newVal.substr(1);
+  }
+
+  // function to lowercase the second character and onward
+  second = (wd: string) => wd.charAt(0).toUpperCase() + wd.substr(1);
+  ifMatch = (match: string) => match.replace(/^\w/, this.second);
+}
+```
+
+What it is going to do here is,
+
+- Present all characters int lower case except the first letter of every word for non `conjuction`, `proposition`, or any other supporting words. They should be in uppercase.
